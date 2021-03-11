@@ -38,9 +38,10 @@ Partial Class Form1
         '
         Me.lblKanji.AutoSize = True
         Me.lblKanji.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblKanji.Location = New System.Drawing.Point(82, 34)
+        Me.lblKanji.Location = New System.Drawing.Point(62, 28)
+        Me.lblKanji.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblKanji.Name = "lblKanji"
-        Me.lblKanji.Size = New System.Drawing.Size(177, 135)
+        Me.lblKanji.Size = New System.Drawing.Size(141, 108)
         Me.lblKanji.TabIndex = 0
         Me.lblKanji.Text = "私"
         '
@@ -48,18 +49,20 @@ Partial Class Form1
         '
         Me.lblHiragana.AutoSize = True
         Me.lblHiragana.Font = New System.Drawing.Font("Microsoft Sans Serif", 28.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHiragana.Location = New System.Drawing.Point(95, 333)
+        Me.lblHiragana.Location = New System.Drawing.Point(71, 271)
+        Me.lblHiragana.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblHiragana.Name = "lblHiragana"
-        Me.lblHiragana.Size = New System.Drawing.Size(138, 55)
+        Me.lblHiragana.Size = New System.Drawing.Size(109, 44)
         Me.lblHiragana.TabIndex = 1
         Me.lblHiragana.Text = "わたし"
         '
         'btnFlipNihongo
         '
         Me.btnFlipNihongo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFlipNihongo.Location = New System.Drawing.Point(100, 193)
+        Me.btnFlipNihongo.Location = New System.Drawing.Point(75, 157)
+        Me.btnFlipNihongo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnFlipNihongo.Name = "btnFlipNihongo"
-        Me.btnFlipNihongo.Size = New System.Drawing.Size(144, 34)
+        Me.btnFlipNihongo.Size = New System.Drawing.Size(108, 28)
         Me.btnFlipNihongo.TabIndex = 2
         Me.btnFlipNihongo.Text = "Flip Hiragana"
         Me.btnFlipNihongo.UseVisualStyleBackColor = True
@@ -67,9 +70,10 @@ Partial Class Form1
         'btnFlipEigo
         '
         Me.btnFlipEigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFlipEigo.Location = New System.Drawing.Point(100, 406)
+        Me.btnFlipEigo.Location = New System.Drawing.Point(75, 330)
+        Me.btnFlipEigo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnFlipEigo.Name = "btnFlipEigo"
-        Me.btnFlipEigo.Size = New System.Drawing.Size(144, 34)
+        Me.btnFlipEigo.Size = New System.Drawing.Size(108, 28)
         Me.btnFlipEigo.TabIndex = 3
         Me.btnFlipEigo.Text = "Flip English"
         Me.btnFlipEigo.UseVisualStyleBackColor = True
@@ -78,18 +82,20 @@ Partial Class Form1
         '
         Me.lblEigo.AutoSize = True
         Me.lblEigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 28.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEigo.Location = New System.Drawing.Point(150, 513)
+        Me.lblEigo.Location = New System.Drawing.Point(112, 417)
+        Me.lblEigo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblEigo.Name = "lblEigo"
-        Me.lblEigo.Size = New System.Drawing.Size(37, 55)
+        Me.lblEigo.Size = New System.Drawing.Size(30, 44)
         Me.lblEigo.TabIndex = 4
         Me.lblEigo.Text = "I"
         '
         'btnNext
         '
         Me.btnNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNext.Location = New System.Drawing.Point(12, 603)
+        Me.btnNext.Location = New System.Drawing.Point(9, 490)
+        Me.btnNext.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(100, 29)
+        Me.btnNext.Size = New System.Drawing.Size(75, 24)
         Me.btnNext.TabIndex = 5
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
@@ -97,9 +103,10 @@ Partial Class Form1
         'btnExit
         '
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Location = New System.Drawing.Point(116, 650)
+        Me.btnExit.Location = New System.Drawing.Point(87, 528)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(100, 29)
+        Me.btnExit.Size = New System.Drawing.Size(75, 24)
         Me.btnExit.TabIndex = 6
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -107,34 +114,37 @@ Partial Class Form1
         'txtNihongo
         '
         Me.txtNihongo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNihongo.Location = New System.Drawing.Point(93, 272)
+        Me.txtNihongo.Location = New System.Drawing.Point(70, 221)
+        Me.txtNihongo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtNihongo.Name = "txtNihongo"
-        Me.txtNihongo.Size = New System.Drawing.Size(151, 30)
+        Me.txtNihongo.Size = New System.Drawing.Size(114, 26)
         Me.txtNihongo.TabIndex = 7
         '
         'txtEigo
         '
         Me.txtEigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEigo.Location = New System.Drawing.Point(93, 466)
+        Me.txtEigo.Location = New System.Drawing.Point(70, 379)
+        Me.txtEigo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtEigo.Name = "txtEigo"
-        Me.txtEigo.Size = New System.Drawing.Size(151, 30)
+        Me.txtEigo.Size = New System.Drawing.Size(114, 26)
         Me.txtEigo.TabIndex = 8
         '
         'btnPrevious
         '
         Me.btnPrevious.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrevious.Location = New System.Drawing.Point(220, 603)
+        Me.btnPrevious.Location = New System.Drawing.Point(165, 490)
+        Me.btnPrevious.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnPrevious.Name = "btnPrevious"
-        Me.btnPrevious.Size = New System.Drawing.Size(100, 29)
+        Me.btnPrevious.Size = New System.Drawing.Size(75, 24)
         Me.btnPrevious.TabIndex = 9
         Me.btnPrevious.Text = "Previous"
         Me.btnPrevious.UseVisualStyleBackColor = True
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(332, 691)
+        Me.ClientSize = New System.Drawing.Size(249, 561)
         Me.Controls.Add(Me.btnPrevious)
         Me.Controls.Add(Me.txtEigo)
         Me.Controls.Add(Me.txtNihongo)
@@ -145,6 +155,7 @@ Partial Class Form1
         Me.Controls.Add(Me.btnFlipNihongo)
         Me.Controls.Add(Me.lblHiragana)
         Me.Controls.Add(Me.lblKanji)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Form1"
         Me.Text = "フラッシュカード"
         Me.ResumeLayout(False)

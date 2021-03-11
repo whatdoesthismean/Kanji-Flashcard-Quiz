@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
+    Dim strKanji() As ("私", "日本", "円")
+    Dim strKana() As ("わたし", "にほん", "えん")
+    Dim strEng() As ("I", "Japan", "Yen")
 End Class
