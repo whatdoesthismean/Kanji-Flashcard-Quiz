@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    Dim strKanji() As ("私", "日本", "円")
-    Dim strKana() As ("わたし", "にほん", "えん")
-    Dim strEng() As ("I", "Japan", "Yen")
+    Dim strKanji() As String = {"私", "日本", "円"}
+    Dim strKana() As String = {"わたし", "にほん", "えん"}
+    Dim strEng() As String = {"I", "Japan", "Yen"}
 End Class
