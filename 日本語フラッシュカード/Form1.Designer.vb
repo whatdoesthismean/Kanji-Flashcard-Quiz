@@ -239,28 +239,31 @@ Partial Class Form1
         '
         Me.lbxKanji.FormattingEnabled = True
         Me.lbxKanji.Items.AddRange(New Object() {"一", "二", "三", "四", "五", "六", "七", "八", "九", "十"})
-        Me.lbxKanji.Location = New System.Drawing.Point(339, 75)
+        Me.lbxKanji.Location = New System.Drawing.Point(203, 0)
         Me.lbxKanji.Name = "lbxKanji"
-        Me.lbxKanji.Size = New System.Drawing.Size(120, 95)
+        Me.lbxKanji.Size = New System.Drawing.Size(244, 134)
         Me.lbxKanji.TabIndex = 16
+        Me.lbxKanji.Visible = False
         '
         'lbxKana
         '
         Me.lbxKana.FormattingEnabled = True
         Me.lbxKana.Items.AddRange(New Object() {"いち", "に", "さん", "よん", "ご", "ろく", "なな", "はち", "きゅう", "じゅう"})
-        Me.lbxKana.Location = New System.Drawing.Point(339, 205)
+        Me.lbxKana.Location = New System.Drawing.Point(203, 137)
         Me.lbxKana.Name = "lbxKana"
-        Me.lbxKana.Size = New System.Drawing.Size(120, 95)
+        Me.lbxKana.Size = New System.Drawing.Size(244, 134)
         Me.lbxKana.TabIndex = 17
+        Me.lbxKana.Visible = False
         '
         'lbxEng
         '
         Me.lbxEng.FormattingEnabled = True
         Me.lbxEng.Items.AddRange(New Object() {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"})
-        Me.lbxEng.Location = New System.Drawing.Point(339, 334)
+        Me.lbxEng.Location = New System.Drawing.Point(203, 277)
         Me.lbxEng.Name = "lbxEng"
-        Me.lbxEng.Size = New System.Drawing.Size(120, 95)
-        Me.lbxEng.TabIndex = 18
+        Me.lbxEng.Size = New System.Drawing.Size(244, 134)
+        Me.lbxEng.TabIndex = 21
+        Me.lbxEng.Visible = False
         '
         'lblSub
         '
