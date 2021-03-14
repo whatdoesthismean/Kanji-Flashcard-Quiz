@@ -38,6 +38,11 @@ Partial Class Form1
         Me.lblYes2 = New System.Windows.Forms.Label()
         Me.lblNo1 = New System.Windows.Forms.Label()
         Me.lblNo2 = New System.Windows.Forms.Label()
+        Me.lbxKanji = New System.Windows.Forms.ListBox()
+        Me.lbxKana = New System.Windows.Forms.ListBox()
+        Me.lbxEng = New System.Windows.Forms.ListBox()
+        Me.lblSub = New System.Windows.Forms.Label()
+        Me.btnBegin = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblKanji
@@ -51,6 +56,7 @@ Partial Class Form1
         Me.lblKanji.TabIndex = 0
         Me.lblKanji.Text = "一"
         Me.lblKanji.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblKanji.Visible = False
         '
         'lblKana
         '
@@ -102,6 +108,7 @@ Partial Class Form1
         '
         'btnNext
         '
+        Me.btnNext.Enabled = False
         Me.btnNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNext.Location = New System.Drawing.Point(9, 484)
         Me.btnNext.Margin = New System.Windows.Forms.Padding(2)
@@ -110,6 +117,7 @@ Partial Class Form1
         Me.btnNext.TabIndex = 4
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
+        Me.btnNext.Visible = False
         '
         'btnExit
         '
@@ -144,6 +152,7 @@ Partial Class Form1
         '
         'btnPrevious
         '
+        Me.btnPrevious.Enabled = False
         Me.btnPrevious.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPrevious.Location = New System.Drawing.Point(155, 484)
         Me.btnPrevious.Margin = New System.Windows.Forms.Padding(2)
@@ -152,6 +161,7 @@ Partial Class Form1
         Me.btnPrevious.TabIndex = 5
         Me.btnPrevious.Text = "Previous"
         Me.btnPrevious.UseVisualStyleBackColor = True
+        Me.btnPrevious.Visible = False
         '
         'lblYes1
         '
@@ -225,6 +235,51 @@ Partial Class Form1
         Me.lblNo2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lblNo2.Visible = False
         '
+        'lbxKanji
+        '
+        Me.lbxKanji.FormattingEnabled = True
+        Me.lbxKanji.Items.AddRange(New Object() {"一", "二", "三", "四", "五", "六", "七", "八", "九", "十"})
+        Me.lbxKanji.Location = New System.Drawing.Point(339, 75)
+        Me.lbxKanji.Name = "lbxKanji"
+        Me.lbxKanji.Size = New System.Drawing.Size(120, 95)
+        Me.lbxKanji.TabIndex = 16
+        '
+        'lbxKana
+        '
+        Me.lbxKana.FormattingEnabled = True
+        Me.lbxKana.Items.AddRange(New Object() {"いち", "に", "さん", "よん", "ご", "ろく", "なな", "はち", "きゅう", "じゅう"})
+        Me.lbxKana.Location = New System.Drawing.Point(339, 205)
+        Me.lbxKana.Name = "lbxKana"
+        Me.lbxKana.Size = New System.Drawing.Size(120, 95)
+        Me.lbxKana.TabIndex = 17
+        '
+        'lbxEng
+        '
+        Me.lbxEng.FormattingEnabled = True
+        Me.lbxEng.Items.AddRange(New Object() {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"})
+        Me.lbxEng.Location = New System.Drawing.Point(339, 334)
+        Me.lbxEng.Name = "lbxEng"
+        Me.lbxEng.Size = New System.Drawing.Size(120, 95)
+        Me.lbxEng.TabIndex = 18
+        '
+        'lblSub
+        '
+        Me.lblSub.AutoSize = True
+        Me.lblSub.Location = New System.Drawing.Point(364, 474)
+        Me.lblSub.Name = "lblSub"
+        Me.lblSub.Size = New System.Drawing.Size(0, 13)
+        Me.lblSub.TabIndex = 19
+        '
+        'btnBegin
+        '
+        Me.btnBegin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBegin.Location = New System.Drawing.Point(83, 485)
+        Me.btnBegin.Name = "btnBegin"
+        Me.btnBegin.Size = New System.Drawing.Size(83, 30)
+        Me.btnBegin.TabIndex = 20
+        Me.btnBegin.Text = "Begin"
+        Me.btnBegin.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -232,6 +287,11 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(249, 561)
+        Me.Controls.Add(Me.btnBegin)
+        Me.Controls.Add(Me.lblSub)
+        Me.Controls.Add(Me.lbxEng)
+        Me.Controls.Add(Me.lbxKana)
+        Me.Controls.Add(Me.lbxKanji)
         Me.Controls.Add(Me.lblNo2)
         Me.Controls.Add(Me.lblNo1)
         Me.Controls.Add(Me.lblYes2)
@@ -273,4 +333,9 @@ Partial Class Form1
     Friend WithEvents lblYes2 As Label
     Friend WithEvents lblNo1 As Label
     Friend WithEvents lblNo2 As Label
+    Friend WithEvents lbxKanji As ListBox
+    Friend WithEvents lbxKana As ListBox
+    Friend WithEvents lbxEng As ListBox
+    Friend WithEvents lblSub As Label
+    Friend WithEvents btnBegin As Button
 End Class

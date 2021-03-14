@@ -1,14 +1,24 @@
 ﻿Public Class Form1
-    Dim strKanji() As String = {"私", "日本", "円", "水", "火"}
-    Dim strKana() As String = {"わたし", "にほん", "えん", "みず", "ひ"}
-    Dim strEng() As String = {"I", "Japan", "yen", "water", "fire"}
-    Dim intSub As Integer = 0
+    Dim intSub As Integer
+    Private Sub btnBegin_Click(sender As Object, e As EventArgs) Handles btnBegin.Click
+        btnBegin.Enabled = False
+        btnBegin.Visible = False
+
+        btnNext.Enabled = True
+        btnNext.Visible = True
+
+        btnPrevious.Enabled = True
+        btnPrevious.Visible = True
+
+        lblKanji.Visible = True
+    End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
 
-        lblKanji.Text = strKanji(intSub).ToString
-        lblKana.Text = strKana(intSub).ToString
-        lblEigo.Text = strEng(intSub).ToString
+        lblKanji.Text = lbxKanji.Items(intSub).ToString
+        lblKana.Text = lbxKana.Items(intSub).ToString
+        lblEigo.Text = lbxEng.Items(intSub).ToString
+
         txtNihongo.Text = ""
         txtEigo.Text = ""
         lblYes1.Visible = False
@@ -16,11 +26,15 @@
         lblNo1.Visible = False
         lblNo2.Visible = False
 
-        If intSub < strKanji(intSub).Length + 3 Then
+        If intSub < lbxKanji.Items.Count - 1 Then
             intSub += 1
         Else
             intSub = 0
         End If
+
+        lblKanji.Text = lbxKanji.Items(intSub).ToString
+        lblKana.Text = lbxKana.Items(intSub).ToString
+        lblEigo.Text = lbxEng.Items(intSub).ToString
 
         lblKana.Visible = False
         lblEigo.Visible = False
@@ -134,14 +148,14 @@
 
         If intSub > 0 Then
             intSub -= 1
-            lblKanji.Text = strKanji(intSub).ToString
-            lblKana.Text = strKana(intSub).ToString
-            lblEigo.Text = strEng(intSub).ToString
+            lblKanji.Text = lbxKanji.Items(intSub).ToString
+            lblKana.Text = lbxKana.Items(intSub).ToString
+            lblEigo.Text = lbxEng.Items(intSub).ToString
         Else
-            intSub = strKanji(intSub).Length + 3
-            lblKanji.Text = strKanji(intSub).ToString
-            lblKana.Text = strKana(intSub).ToString
-            lblEigo.Text = strEng(intSub).ToString
+            intSub = lbxKanji.Items.Count - 1
+            lblKanji.Text = lbxKanji.Items(intSub).ToString
+            lblKana.Text = lbxKana.Items(intSub).ToString
+            lblEigo.Text = lbxEng.Items(intSub).ToString
         End If
 
         lblKana.Visible = False
@@ -154,4 +168,6 @@
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
     End Sub
+
+
 End Class
