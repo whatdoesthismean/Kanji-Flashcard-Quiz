@@ -1,8 +1,30 @@
 ﻿Public Class Form1
-
+    Dim R As IO.StreamReader
     Dim intSub As Integer
 
     Private Sub btnBegin_Click(sender As Object, e As EventArgs) Handles btnBegin.Click
+
+        R = New IO.StreamReader("C:\Users\pesky\Downloads\CS115\KanjiList.txt")
+        While (R.Peek() > -1)
+            lbxKanji.Items.Add(R.ReadLine)
+        End While
+        R.Close()
+
+        R = New IO.StreamReader("C:\Users\pesky\Downloads\CS115\KanaList.txt")
+        While (R.Peek() > -1)
+            lbxKana.Items.Add(R.ReadLine)
+        End While
+        R.Close()
+
+        R = New IO.StreamReader("C:\Users\pesky\Downloads\CS115\EngList.txt")
+        While (R.Peek() > -1)
+            lbxEng.Items.Add(R.ReadLine)
+        End While
+        R.Close()
+
+        lblKanji.Text = lbxKanji.Items(intSub).ToString
+        lblKana.Text = lbxKana.Items(intSub).ToString
+        lblEng.Text = lbxEng.Items(intSub).ToString
 
         btnBegin.Visible = False
         btnNext.Visible = True
@@ -24,13 +46,12 @@
         txtKana.Visible = True
         txtEng.Visible = True
 
+        txtKana.Focus()
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
 
-        lblKanji.Text = lbxKanji.Items(intSub).ToString
-        lblKana.Text = lbxKana.Items(intSub).ToString
-        lblEng.Text = lbxEng.Items(intSub).ToString
+
 
         txtKana.Text = ""
         txtEng.Text = ""
@@ -55,7 +76,7 @@
         txtKana.Focus()
     End Sub
 
-    Private Sub btnFlipNihongo_Click(sender As Object, e As EventArgs) Handles btnTestKana.Click
+    Private Sub btnTestKana_Click(sender As Object, e As EventArgs) Handles btnTestKana.Click
 
         lblKana.Visible = False
         lblTestKanaYes.Visible = False
@@ -103,7 +124,8 @@
 
     End Sub
 
-    Private Sub btnFlipEigo_Click(sender As Object, e As EventArgs) Handles btnTestEng.Click
+    Private Sub btnTestEng_Click(sender As Object, e As EventArgs) Handles btnTestEng.Click
+
         lblEng.Visible = False
         lblTestEngYes.Visible = False
         lblTestEngNo.Visible = False
@@ -184,17 +206,58 @@
 
     Private Sub btnShowKana_Click(sender As Object, e As EventArgs) Handles btnShowKana.Click
 
-        lblKana.Visible = True
-        lblTestKanaNo.Visible = False
-        lblTestKanaYes.Visible = False
+        If lblKana.Visible = False Then
+            lblKana.Visible = True
+            lblTestKanaNo.Visible = False
+            lblTestKanaYes.Visible = False
+        Else
+            lblKana.Visible = False
+            lblTestKanaNo.Visible = False
+            lblTestKanaYes.Visible = False
+        End If
+
 
     End Sub
 
     Private Sub btnShowEng_Click(sender As Object, e As EventArgs) Handles btnShowEng.Click
 
-        lblEng.Visible = True
-        lblTestEngNo.Visible = False
-        lblTestEngYes.Visible = False
+        If lblEng.Visible = False Then
+            lblEng.Visible = True
+            lblTestEngNo.Visible = False
+            lblTestEngYes.Visible = False
+        Else
+            lblEng.Visible = False
+            lblTestEngNo.Visible = False
+            lblTestEngYes.Visible = False
+        End If
 
+    End Sub
+
+    Private Sub btnAddKanji_Click(sender As Object, e As EventArgs) Handles btnAddKanji.Click
+
+        lbxKanji.Items.Clear()
+        lbxKana.Items.Clear()
+        lbxEng.Items.Clear()
+
+        R = New IO.StreamReader("C:\Users\pesky\Downloads\CS115\KanjiList.txt")
+        While (R.Peek() > -1)
+            lbxKanji.Items.Add(R.ReadLine)
+        End While
+        R.Close()
+
+        R = New IO.StreamReader("C:\Users\pesky\Downloads\CS115\KanaList.txt")
+        While (R.Peek() > -1)
+            lbxKana.Items.Add(R.ReadLine)
+        End While
+        R.Close()
+
+        R = New IO.StreamReader("C:\Users\pesky\Downloads\CS115\EngList.txt")
+        While (R.Peek() > -1)
+            lbxEng.Items.Add(R.ReadLine)
+        End While
+        R.Close()
+
+
+        Form2.Show()
     End Sub
 End Class

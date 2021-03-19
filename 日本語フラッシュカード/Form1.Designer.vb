@@ -39,9 +39,6 @@ Partial Class Form1
         Me.lblTestEngYes = New System.Windows.Forms.Label()
         Me.lblTestKanaNo = New System.Windows.Forms.Label()
         Me.lblTestEngNo = New System.Windows.Forms.Label()
-        Me.lbxKanji = New System.Windows.Forms.ListBox()
-        Me.lbxKana = New System.Windows.Forms.ListBox()
-        Me.lbxEng = New System.Windows.Forms.ListBox()
         Me.lblSub = New System.Windows.Forms.Label()
         Me.btnBegin = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
@@ -52,6 +49,10 @@ Partial Class Form1
         Me.lblIntro3 = New System.Windows.Forms.Label()
         Me.lblIntro4 = New System.Windows.Forms.Label()
         Me.lblIntro5 = New System.Windows.Forms.Label()
+        Me.lbxEng = New System.Windows.Forms.ListBox()
+        Me.lbxKana = New System.Windows.Forms.ListBox()
+        Me.lbxKanji = New System.Windows.Forms.ListBox()
+        Me.btnAddKanji = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblKanji
@@ -132,11 +133,11 @@ Partial Class Form1
         'btnExit
         '
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Location = New System.Drawing.Point(83, 520)
+        Me.btnExit.Location = New System.Drawing.Point(9, 521)
         Me.btnExit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(83, 30)
-        Me.btnExit.TabIndex = 6
+        Me.btnExit.TabIndex = 21
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -248,36 +249,6 @@ Partial Class Form1
         Me.lblTestEngNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lblTestEngNo.Visible = False
         '
-        'lbxKanji
-        '
-        Me.lbxKanji.FormattingEnabled = True
-        Me.lbxKanji.Items.AddRange(New Object() {"一", "二", "三", "四", "五", "六", "七", "八", "九", "十"})
-        Me.lbxKanji.Location = New System.Drawing.Point(203, 2)
-        Me.lbxKanji.Name = "lbxKanji"
-        Me.lbxKanji.Size = New System.Drawing.Size(244, 134)
-        Me.lbxKanji.TabIndex = 16
-        Me.lbxKanji.Visible = False
-        '
-        'lbxKana
-        '
-        Me.lbxKana.FormattingEnabled = True
-        Me.lbxKana.Items.AddRange(New Object() {"いち", "に", "さん", "よん", "ご", "ろく", "なな", "はち", "きゅう", "じゅう"})
-        Me.lbxKana.Location = New System.Drawing.Point(203, 137)
-        Me.lbxKana.Name = "lbxKana"
-        Me.lbxKana.Size = New System.Drawing.Size(244, 134)
-        Me.lbxKana.TabIndex = 17
-        Me.lbxKana.Visible = False
-        '
-        'lbxEng
-        '
-        Me.lbxEng.FormattingEnabled = True
-        Me.lbxEng.Items.AddRange(New Object() {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"})
-        Me.lbxEng.Location = New System.Drawing.Point(203, 277)
-        Me.lbxEng.Name = "lbxEng"
-        Me.lbxEng.Size = New System.Drawing.Size(244, 134)
-        Me.lbxEng.TabIndex = 21
-        Me.lbxEng.Visible = False
-        '
         'lblSub
         '
         Me.lblSub.AutoSize = True
@@ -370,6 +341,43 @@ Partial Class Form1
         Me.lblIntro5.Text = "Use ""Flip"" buttons to study without testing."
         Me.lblIntro5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'lbxEng
+        '
+        Me.lbxEng.FormattingEnabled = True
+        Me.lbxEng.Location = New System.Drawing.Point(276, 277)
+        Me.lbxEng.Name = "lbxEng"
+        Me.lbxEng.Size = New System.Drawing.Size(244, 134)
+        Me.lbxEng.TabIndex = 21
+        Me.lbxEng.Visible = False
+        '
+        'lbxKana
+        '
+        Me.lbxKana.FormattingEnabled = True
+        Me.lbxKana.Location = New System.Drawing.Point(280, 137)
+        Me.lbxKana.Name = "lbxKana"
+        Me.lbxKana.Size = New System.Drawing.Size(244, 134)
+        Me.lbxKana.TabIndex = 17
+        Me.lbxKana.Visible = False
+        '
+        'lbxKanji
+        '
+        Me.lbxKanji.FormattingEnabled = True
+        Me.lbxKanji.Location = New System.Drawing.Point(289, 2)
+        Me.lbxKanji.Name = "lbxKanji"
+        Me.lbxKanji.Size = New System.Drawing.Size(244, 134)
+        Me.lbxKanji.TabIndex = 16
+        Me.lbxKanji.Visible = False
+        '
+        'btnAddKanji
+        '
+        Me.btnAddKanji.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddKanji.Location = New System.Drawing.Point(155, 521)
+        Me.btnAddKanji.Name = "btnAddKanji"
+        Me.btnAddKanji.Size = New System.Drawing.Size(82, 30)
+        Me.btnAddKanji.TabIndex = 29
+        Me.btnAddKanji.Text = "Add Kanji"
+        Me.btnAddKanji.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -377,6 +385,7 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(249, 561)
+        Me.Controls.Add(Me.btnAddKanji)
         Me.Controls.Add(Me.lblIntro5)
         Me.Controls.Add(Me.lblIntro4)
         Me.Controls.Add(Me.lblIntro3)
@@ -430,9 +439,6 @@ Partial Class Form1
     Friend WithEvents lblTestEngYes As Label
     Friend WithEvents lblTestKanaNo As Label
     Friend WithEvents lblTestEngNo As Label
-    Friend WithEvents lbxKanji As ListBox
-    Friend WithEvents lbxKana As ListBox
-    Friend WithEvents lbxEng As ListBox
     Friend WithEvents lblSub As Label
     Friend WithEvents btnBegin As Button
     Friend WithEvents ToolTip1 As ToolTip
@@ -443,4 +449,8 @@ Partial Class Form1
     Friend WithEvents lblIntro3 As Label
     Friend WithEvents lblIntro4 As Label
     Friend WithEvents lblIntro5 As Label
+    Friend WithEvents lbxEng As ListBox
+    Friend WithEvents lbxKana As ListBox
+    Friend WithEvents lbxKanji As ListBox
+    Friend WithEvents btnAddKanji As Button
 End Class
